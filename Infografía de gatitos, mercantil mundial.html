@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia del Derecho Mercantil Mundial 🐱</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #1a1118;
+    --negro2: #241a22;
+    --rosa: #f4a7c3;
+    --rosa-light: #fce4ef;
+    --rosa-dark: #e07fa8;
+    --cafe: #8b6355;
+    --cafe-light: #c4957e;
+    --cafe-dark: #5c3d2e;
+    --lila: #c9b1e8;
+    --lila-light: #e8dcf7;
+    --lila-dark: #9b79cc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--negro);
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾🐾';
+    position: fixed; inset: 0;
+    font-size: 28px; line-height: 2.2; word-spacing: 20px;
+    opacity: 0.04; z-index: 0; pointer-events: none; overflow: hidden;
+  }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #2d1f2b, #3d2538);
+    border-radius: 28px; padding: 36px 28px;
+    text-align: center; margin-bottom: 22px;
+    border: 2px solid rgba(244,167,195,0.3);
+  }
+  .cat-tag {
+    display: inline-block;
+    background: rgba(244,167,195,0.15); border: 1px solid rgba(244,167,195,0.4);
+    color: var(--rosa); font-size: 11px; font-weight: 800;
+    letter-spacing: 2px; padding: 5px 18px; border-radius: 20px;
+    margin-bottom: 14px; text-transform: uppercase;
+  }
+  .cat-row {
+    font-size: 32px; margin-bottom: 14px;
+    display: flex; justify-content: center; gap: 10px;
+  }
+  .kitty-icon { display: inline-block; animation: bounce 2s ease-in-out infinite; }
+  .kitty-icon:nth-child(2) { animation-delay: 0.3s; }
+  .kitty-icon:nth-child(3) { animation-delay: 0.6s; }
+  .kitty-icon:nth-child(4) { animation-delay: 0.9s; }
+  .kitty-icon:nth-child(5) { animation-delay: 1.2s; }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(26px, 5vw, 48px); color: var(--rosa);
+    text-shadow: 3px 3px 0 var(--cafe-dark); margin-bottom: 8px;
+  }
+  .header h2 { font-size: 15px; color: var(--lila); font-weight: 600; letter-spacing: 1px; }
+
+  /* INTRO */
+  .intro-strip {
+    background: linear-gradient(135deg, var(--lila-light), var(--rosa-light));
+    border-radius: 18px; padding: 20px 24px; margin-bottom: 22px;
+    display: flex; align-items: center; gap: 16px;
+    border: 2px dashed var(--rosa-dark);
+  }
+  .intro-cat { font-size: 52px; flex-shrink: 0; animation: wiggle 4s ease-in-out infinite; }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg) scale(1.05); }
+    75% { transform: rotate(5deg) scale(1.05); }
+  }
+  .intro-strip p { font-size: 14px; line-height: 1.8; color: var(--cafe-dark); font-weight: 600; }
+  .intro-strip strong { color: var(--lila-dark); }
+
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 26px; }
+  .stat {
+    background: var(--negro2); border-radius: 14px; padding: 16px 10px;
+    text-align: center; border: 2px solid rgba(201,177,232,0.25); transition: transform 0.3s;
+  }
+  .stat:hover { transform: scale(1.05) rotate(1deg); }
+  .stat-emoji { font-size: 24px; margin-bottom: 5px; display: block; }
+  .stat-num { font-family: 'Fredoka One', cursive; font-size: 26px; color: var(--rosa); display: block; }
+  .stat-label { font-size: 10px; color: var(--lila); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px; display: block; }
+
+  /* SECTION TITLE */
+  .sec-title { text-align: center; margin: 30px 0 20px; }
+  .sec-title h2 {
+    font-family: 'Fredoka One', cursive; font-size: 24px; color: var(--lila);
+    text-shadow: 2px 2px 0 var(--cafe-dark);
+    background: var(--negro2); padding: 8px 24px; border-radius: 50px;
+    border: 2px solid rgba(201,177,232,0.4); display: inline-block;
+  }
+
+  /* ===== TIMELINE CORREGIDO ===== */
+  .timeline {
+    position: relative;
+    padding-left: 80px; /* deja espacio para nodo + línea */
+  }
+
+  /* Línea vertical */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(to bottom, var(--rosa), var(--lila), var(--cafe-light), var(--rosa));
+    border-radius: 4px;
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 20px;
+    animation: slideIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  .tl-item:nth-child(1){animation-delay:0.05s}
+  .tl-item:nth-child(2){animation-delay:0.12s}
+  .tl-item:nth-child(3){animation-delay:0.19s}
+  .tl-item:nth-child(4){animation-delay:0.26s}
+  .tl-item:nth-child(5){animation-delay:0.33s}
+  .tl-item:nth-child(6){animation-delay:0.40s}
+  .tl-item:nth-child(7){animation-delay:0.47s}
+  @keyframes slideIn {
+    from { opacity:0; transform:translateX(-20px); }
+    to   { opacity:1; transform:translateX(0); }
+  }
+
+  /* Nodo circular */
+  .tl-node {
+    position: absolute;
+    left: -80px; top: 10px;
+    width: 54px; height: 54px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--negro2), #2d2030);
+    border: 3px solid var(--rosa);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; cursor: pointer; transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(244,167,195,0.3); z-index: 2;
+  }
+  .tl-node:hover { transform: scale(1.2) rotate(10deg); border-color: var(--lila); }
+  .tl-node.lila { border-color: var(--lila); box-shadow: 0 4px 15px rgba(201,177,232,0.3); }
+  .tl-node.cafe { border-color: var(--cafe-light); box-shadow: 0 4px 15px rgba(196,149,126,0.3); }
+
+  /* Fecha debajo del nodo */
+  .tl-date {
+    position: absolute;
+    left: -80px; top: 68px; width: 54px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 10px; color: var(--rosa); text-align: center; line-height: 1.3;
+  }
+
+  /* Tarjeta — ahora full-width del área derecha */
+  .tl-card {
+    background: linear-gradient(135deg, #2d1f2b, #321d30);
+    border-radius: 18px; padding: 18px 22px;
+    border: 2px solid rgba(244,167,195,0.22);
+    transition: all 0.3s;
+  }
+  .tl-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(244,167,195,0.6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .tl-card.lila-card {
+    background: linear-gradient(135deg, #261d30, #2b1f35);
+    border-color: rgba(201,177,232,0.22);
+  }
+  .tl-card.lila-card:hover { border-color: rgba(201,177,232,0.6); }
+  .tl-card.cafe-card {
+    background: linear-gradient(135deg, #2a1d18, #2e2019);
+    border-color: rgba(196,149,126,0.25);
+  }
+  .tl-card.cafe-card:hover { border-color: rgba(196,149,126,0.6); }
+
+  .card-kitty { font-size: 20px; margin-bottom: 5px; display: block; }
+  .card-era {
+    font-size: 10px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--rosa); margin-bottom: 4px;
+  }
+  .lila-card .card-era { color: var(--lila); }
+  .cafe-card .card-era { color: var(--cafe-light); }
+  .tl-card h3 {
+    font-family: 'Fredoka One', cursive; font-size: 18px;
+    color: #fce4ef; margin-bottom: 8px; line-height: 1.3;
+  }
+  .tl-card p { font-size: 13.5px; line-height: 1.75; color: #b09ab8; }
+  .card-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+  .pill { font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+  .pill.rosa { background: rgba(244,167,195,0.15); color: var(--rosa); border: 1px solid rgba(244,167,195,0.3); }
+  .pill.lila { background: rgba(201,177,232,0.15); color: var(--lila); border: 1px solid rgba(201,177,232,0.3); }
+  .pill.cafe { background: rgba(196,149,126,0.15); color: var(--cafe-light); border: 1px solid rgba(196,149,126,0.3); }
+
+  /* FOOTER */
+  .footer {
+    text-align: center; margin-top: 36px; padding: 22px;
+    background: var(--negro2); border-radius: 20px;
+    border: 2px dashed rgba(201,177,232,0.25);
+  }
+  .footer p { color: var(--lila); font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+  .cats-footer { font-size: 22px; margin-bottom: 8px; display: block; }
+
+  @media (max-width: 580px) {
+    .stats { grid-template-columns: repeat(2,1fr); }
+    .intro-strip { flex-direction: column; text-align: center; }
+    .timeline { padding-left: 62px; }
+    .tl-node { left: -62px; width: 46px; height: 46px; font-size: 18px; }
+    .tl-date { left: -62px; width: 46px; top: 58px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="cat-tag">🐾 Infografía Gatuna I · Derecho Mercantil 🐾</div>
+    <div class="cat-row">
+      <span class="kitty-icon">🧑‍⚖️</span>
+      <span class="kitty-icon">😸</span>
+      <span class="kitty-icon">📜</span>
+      <span class="kitty-icon">😺</span>
+      <span class="kitty-icon">⚖️</span>
+    </div>
+    <h1>Historia del Derecho Mercantil</h1>
+    <h2>🌍 A Nivel Mundial · Con Gatitos Abogados 🐱⚖️</h2>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-strip">
+    <div class="intro-cat">😼</div>
+    <p>El <strong>Derecho Mercantil</strong> es la rama que regula el comercio y los actos mercantiles entre personas. ¡Lleva más de <strong>4,000 años</strong> de historia! Desde los mercaderes de Babilonia 🏺 hasta los contratos digitales de hoy 💻. ¡Estos gatitos te explican todo miau por miau! 🐾</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-emoji">📅</span>
+      <span class="stat-num">4000</span>
+      <span class="stat-label">años de historia</span>
+    </div>
+    <div class="stat">
+      <span class="stat-emoji">😺</span>
+      <span class="stat-num">7</span>
+      <span class="stat-label">grandes eras</span>
+    </div>
+    <div class="stat">
+      <span class="stat-emoji">📜</span>
+      <span class="stat-num">1807</span>
+      <span class="stat-label">primer código moderno</span>
+    </div>
+    <div class="stat">
+      <span class="stat-emoji">🌐</span>
+      <span class="stat-num">195</span>
+      <span class="stat-label">países regulados</span>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="sec-title"><h2>😸 Línea del Tiempo Gatuna 😸</h2></div>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-node">🏛️</div>
+      <div class="tl-date">3000<br>a.C.</div>
+      <div class="tl-card">
+        <span class="card-kitty">🏺😾</span>
+        <div class="card-era">Antigüedad · 3000 a.C. – 476 d.C.</div>
+        <h3>Las Civilizaciones Antiguas</h3>
+        <p>El <em>Código de Hammurabi</em> (~1754 a.C.) fue la primera ley comercial conocida. ¡Regulaba préstamos y contratos como un gatito muy serio! Los fenicios navegaban vendiendo cosas por todo el Mediterráneo, y Roma creó el <em>ius gentium</em> para regular el comercio entre pueblos. 🏛️</p>
+        <div class="card-pills">
+          <span class="pill rosa">Hammurabi</span><span class="pill rosa">Roma</span><span class="pill rosa">Fenicios</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-node lila">⚓</div>
+      <div class="tl-date">S. XI–XV</div>
+      <div class="tl-card lila-card">
+        <span class="card-kitty">🚢😺</span>
+        <div class="card-era">Edad Media · Siglos XI al XV</div>
+        <h3>Las Ciudades Italianas y los Gremios</h3>
+        <p>¡Los gatitos mercaderes de Génova, Venecia y Florencia lo inventaron casi todo! Surgieron los <em>estatuti</em> de los gremios, las ferias de Champaña, la <strong>letra de cambio</strong>, los primeros bancos y el seguro marítimo. Se crearon los primeros tribunales de comercio. 🏰</p>
+        <div class="card-pills">
+          <span class="pill lila">Gremios</span><span class="pill lila">Letra de cambio</span><span class="pill lila">Ferias</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-node cafe">🌍</div>
+      <div class="tl-date">S. XV–XVIII</div>
+      <div class="tl-card cafe-card">
+        <span class="card-kitty">🌍🐱</span>
+        <div class="card-era">Edad Moderna · S. XV – XVIII</div>
+        <h3>Expansión Colonial y Ordenanzas</h3>
+        <p>Los barcos salían a explorar el mundo y los gatitos comerciantes iban con ellos. 🌊 Se promulgaron las <em>Ordenanzas de Bilbao</em> (1737) y las Ordenanzas de Colbert en Francia (1673). Aparecen las grandes Compañías Coloniales y el seguro terrestre.</p>
+        <div class="card-pills">
+          <span class="pill cafe">Ordenanzas Bilbao</span><span class="pill cafe">Colbert</span><span class="pill cafe">Compañías Coloniales</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-node lila">📜</div>
+      <div class="tl-date">1807</div>
+      <div class="tl-card lila-card">
+        <span class="card-kitty">📖😸</span>
+        <div class="card-era">Codificación · 1807</div>
+        <h3>¡El Código Napoleónico!</h3>
+        <p>El <em>Code de Commerce</em> francés de 1807 fue el <strong>primer código mercantil moderno</strong> del mundo. ¡Napoleón era muy ordenado, como un gato que acomoda su comida! 🐱 Reguló actos de comercio, sociedades, quiebras y fue modelo para toda Europa y América Latina.</p>
+        <div class="card-pills">
+          <span class="pill lila">Napoleón</span><span class="pill lila">Code de Commerce</span><span class="pill lila">Modelo mundial</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-node">⚙️</div>
+      <div class="tl-date">S. XIX</div>
+      <div class="tl-card">
+        <span class="card-kitty">⚙️🐾</span>
+        <div class="card-era">Industrialización · Siglo XIX</div>
+        <h3>Revolución Industrial y Sociedades Anónimas</h3>
+        <p>¡Las fábricas llegaron y los gatitos accionistas también! Las <strong>Sociedades Anónimas</strong> se multiplican para financiar enormes proyectos. Surge el Derecho bursátil y Alemania publica el <em>HGB</em> (1897). ¡Nace el arbitraje comercial moderno! 🏭</p>
+        <div class="card-pills">
+          <span class="pill rosa">Sociedad Anónima</span><span class="pill rosa">Bolsa de valores</span><span class="pill rosa">HGB 1897</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-node lila">🏢</div>
+      <div class="tl-date">S. XX</div>
+      <div class="tl-card lila-card">
+        <span class="card-kitty">🌐😼</span>
+        <div class="card-era">Globalización · Siglo XX</div>
+        <h3>¡El Mundo se Une!</h3>
+        <p>Se crean la <strong>OMC</strong> (1995), la UNCITRAL (1966) y la CCI (1919). Los <em>Incoterms</em>, los Principios UNIDROIT y la Convención de Viena sobre Compraventa Internacional (CISG, 1980) unifican el comercio global. ¡Los gatitos de todo el mundo hacen negocios juntos! 🤝</p>
+        <div class="card-pills">
+          <span class="pill lila">OMC</span><span class="pill lila">UNCITRAL</span><span class="pill lila">CISG</span><span class="pill lila">Incoterms</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-node cafe">💻</div>
+      <div class="tl-date">S. XXI</div>
+      <div class="tl-card cafe-card">
+        <span class="card-kitty">💻😺</span>
+        <div class="card-era">Era Digital · Siglo XXI</div>
+        <h3>Comercio Electrónico y Fintech</h3>
+        <p>¡Los gatitos ahora compran por internet! El e-commerce, las criptomonedas, los <em>smart contracts</em> y la inteligencia artificial necesitan nuevas leyes. La UE lanzó el <em>DMA</em>. El Derecho Mercantil se adapta a la economía de datos y las plataformas digitales. 🚀</p>
+        <div class="card-pills">
+          <span class="pill cafe">E-commerce</span><span class="pill cafe">Blockchain</span><span class="pill cafe">Smart contracts</span><span class="pill cafe">DMA</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="cats-footer">😸 🐾 😺 🐾 😸</span>
+    <p>HISTORIA DEL DERECHO MERCANTIL MUNDIAL · Infografía Gatuna I de II · ¡Miau! ⚖️🐱</p>
+  </div>
+
+</div>
+</body>
+</html>
