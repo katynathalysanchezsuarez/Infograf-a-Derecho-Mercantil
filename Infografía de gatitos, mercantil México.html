@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia del Derecho Mercantil en México 🐱🇲🇽</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --negro: #130f1a;
+    --negro2: #1e1628;
+    --rosa: #f4a7c3;
+    --rosa-light: #fce4ef;
+    --rosa-dark: #d97fa8;
+    --cafe: #9b7265;
+    --cafe-light: #c9a08a;
+    --cafe-dark: #5c3d2e;
+    --lila: #c9b1e8;
+    --lila-light: #ede0fa;
+    --lila-dark: #9b79cc;
+    --crema: #fdf4f8;
+    --text-muted: #a898b8;
+    --text-light: #e8ddf0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--negro);
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-light);
+    min-height: 100vh;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E"), auto;
+  }
+
+  /* Patrón de fondo con motivos */
+  .bg-deco {
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 15%, rgba(249,167,195,0.07) 0%, transparent 40%),
+      radial-gradient(ellipse at 85% 85%, rgba(201,177,232,0.07) 0%, transparent 40%),
+      radial-gradient(ellipse at 50% 50%, rgba(155,114,101,0.04) 0%, transparent 60%),
+      var(--negro);
+    z-index: -1;
+  }
+
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    position: relative;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    border-radius: 30px;
+    padding: 44px 30px 36px;
+    text-align: center;
+    margin-bottom: 28px;
+    background: linear-gradient(160deg, #1e1628, #2a1730, #1e1d2e);
+    border: 2px solid rgba(201,177,232,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decoración pata en esquinas */
+  .header::before {
+    content: '🐾';
+    position: absolute;
+    top: 14px; left: 20px;
+    font-size: 28px;
+    opacity: 0.25;
+  }
+  .header::after {
+    content: '🐾';
+    position: absolute;
+    bottom: 14px; right: 20px;
+    font-size: 28px;
+    opacity: 0.25;
+    transform: rotate(180deg);
+  }
+
+  .header-badge {
+    display: inline-block;
+    background: rgba(201,177,232,0.15);
+    border: 1px solid rgba(201,177,232,0.4);
+    color: var(--lila);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 5px 18px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+
+  .header-cats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .hcat {
+    display: inline-block;
+    animation: catDance 2.5s ease-in-out infinite;
+  }
+  .hcat:nth-child(1) { animation-delay: 0s; }
+  .hcat:nth-child(2) { animation-delay: 0.4s; }
+  .hcat:nth-child(3) { animation-delay: 0.8s; animation: catSpin 4s linear infinite; }
+  .hcat:nth-child(4) { animation-delay: 0.4s; }
+  .hcat:nth-child(5) { animation-delay: 0s; }
+
+  @keyframes catDance {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  @keyframes catSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(30px, 6vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .h1-mx {
+    background: linear-gradient(90deg, #f4a7c3, #c9b1e8, #c9a08a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .header-sub {
+    font-size: 15px;
+    color: var(--rosa);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* ===== INTRO ===== */
+  .intro-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .icard {
+    background: var(--negro2);
+    border-radius: 20px;
+    padding: 22px 20px;
+    border: 2px solid rgba(244,167,195,0.2);
+    transition: transform 0.3s;
+    position: relative;
+  }
+
+  .icard:hover { transform: rotate(-0.5deg) scale(1.01); }
+  .icard:nth-child(2):hover { transform: rotate(0.5deg) scale(1.01); }
+
+  .icard-icon { font-size: 32px; margin-bottom: 10px; display: block; }
+
+  .icard h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    color: var(--lila);
+    margin-bottom: 8px;
+  }
+
+  .icard p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-weight: 600;
+  }
+
+  .icard p strong { color: var(--rosa); }
+
+  /* ===== GRILLA DE PERIODOS ===== */
+  .sec-title {
+    text-align: center;
+    margin: 36px 0 22px;
+  }
+
+  .sec-title h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 26px;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--rosa), var(--lila));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .sec-title h2::before, .sec-title h2::after {
+    content: ' 🐾 ';
+    -webkit-text-fill-color: initial;
+  }
+
+  .periods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .pcard {
+    background: var(--negro2);
+    border-radius: 20px;
+    padding: 20px 16px;
+    border: 2px solid rgba(244,167,195,0.15);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .pcard:hover {
+    transform: translateY(-6px) rotate(0.5deg);
+    border-color: rgba(244,167,195,0.5);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+  }
+
+  .pcard:nth-child(even):hover { transform: translateY(-6px) rotate(-0.5deg); }
+
+  /* Barra de color superior por periodo */
+  .pcard::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .pcard.p1::before { background: linear-gradient(90deg, #c9a08a, #f4a7c3); }
+  .pcard.p2::before { background: linear-gradient(90deg, #8B6355, #c9a08a); }
+  .pcard.p3::before { background: linear-gradient(90deg, #f4a7c3, #e07fa8); }
+  .pcard.p4::before { background: linear-gradient(90deg, #c9b1e8, #9b79cc); }
+  .pcard.p5::before { background: linear-gradient(90deg, #9b79cc, #c9b1e8); }
+  .pcard.p6::before { background: linear-gradient(90deg, #e07fa8, #f4a7c3); }
+  .pcard.p7::before { background: linear-gradient(90deg, #c9a08a, #c9b1e8); }
+  .pcard.p8::before { background: linear-gradient(90deg, #f4a7c3, #c9b1e8); }
+  .pcard.p9::before { background: linear-gradient(90deg, #9b79cc, #f4a7c3); }
+
+  .p-icon { font-size: 32px; margin-bottom: 8px; display: block; }
+
+  .p-date {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--cafe-light);
+    margin-bottom: 5px;
+  }
+
+  .pcard h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    color: var(--rosa-light);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .pcard p {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    font-weight: 400;
+  }
+
+  .p-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 10px;
+  }
+
+  .ppill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 20px;
+  }
+
+  .ppill.r { background: rgba(244,167,195,0.12); color: var(--rosa); border: 1px solid rgba(244,167,195,0.25); }
+  .ppill.l { background: rgba(201,177,232,0.12); color: var(--lila); border: 1px solid rgba(201,177,232,0.25); }
+  .ppill.c { background: rgba(201,160,138,0.12); color: var(--cafe-light); border: 1px solid rgba(201,160,138,0.25); }
+
+  /* ===== LEYES CLAVE ===== */
+  .laws-section { margin-bottom: 30px; }
+
+  .laws-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .law-card {
+    background: var(--negro2);
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+    border: 2px solid rgba(201,177,232,0.2);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .law-card:hover {
+    transform: scale(1.06) rotate(-1deg);
+    border-color: var(--lila);
+    box-shadow: 0 8px 25px rgba(201,177,232,0.2);
+  }
+
+  .law-emoji { font-size: 26px; display: block; margin-bottom: 8px; }
+
+  .law-year {
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    color: var(--lila);
+    display: block;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .law-name {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+
+  .law-desc {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ===== HITOS ===== */
+  .hitos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .hito {
+    background: var(--negro2);
+    border-radius: 18px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    border: 2px solid rgba(244,167,195,0.12);
+    transition: all 0.3s;
+  }
+
+  .hito:hover {
+    border-color: rgba(244,167,195,0.35);
+    transform: translateX(4px);
+  }
+
+  .hito:nth-child(even):hover { transform: translateX(-4px); }
+
+  .hito-cat { font-size: 36px; flex-shrink: 0; line-height: 1; }
+
+  .hito h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 15px;
+    color: var(--rosa);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .hito p {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ===== CAT FACTS BAR ===== */
+  .cat-facts {
+    background: linear-gradient(135deg, rgba(244,167,195,0.1), rgba(201,177,232,0.1));
+    border: 2px dashed rgba(201,177,232,0.35);
+    border-radius: 20px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cf-cat { font-size: 48px; flex-shrink: 0; animation: wiggleCat 3s ease-in-out infinite; }
+
+  @keyframes wiggleCat {
+    0%, 100% { transform: rotate(-8deg) scale(1); }
+    50% { transform: rotate(8deg) scale(1.1); }
+  }
+
+  .cf-text h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    color: var(--lila);
+    margin-bottom: 6px;
+  }
+
+  .cf-text p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-weight: 600;
+  }
+
+  .cf-text p strong { color: var(--rosa); }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--negro2);
+    border-radius: 24px;
+    padding: 28px;
+    text-align: center;
+    border: 2px dashed rgba(244,167,195,0.25);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer::before {
+    content: '🐱⚖️📜🐾😸🏛️😺🐾📋🐱';
+    position: absolute;
+    inset: 0;
+    font-size: 28px;
+    opacity: 0.04;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 10px;
+    pointer-events: none;
+  }
+
+  .footer-cats {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+    animation: footCats 4s ease-in-out infinite;
+  }
+
+  @keyframes footCats {
+    0%, 100% { letter-spacing: 8px; }
+    50% { letter-spacing: 16px; }
+  }
+
+  .footer p {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--lila);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 820px) {
+    .periods-grid { grid-template-columns: repeat(2, 1fr); }
+    .laws-grid { grid-template-columns: repeat(2, 1fr); }
+    .hitos-grid { grid-template-columns: 1fr; }
+    .intro-duo { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 500px) {
+    .periods-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-deco"></div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-badge">🐾 Infografía Gatuna II · México 🐾</div>
+    <div class="header-cats">
+      <span class="hcat">🐱</span>
+      <span class="hcat">😸</span>
+      <span class="hcat">🇲🇽</span>
+      <span class="hcat">😺</span>
+      <span class="hcat">🐱</span>
+    </div>
+    <h1>
+      <span class="h1-mx">Historia del Derecho Mercantil</span><br>
+      <span style="color: var(--cafe-light); font-size: 0.75em;">en México 🐾⚖️</span>
+    </h1>
+    <p class="header-sub">De los Pochtecas al Comercio Digital · Con Gatitos 😺</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-duo">
+    <div class="icard">
+      <span class="icard-icon">🇲🇽😺</span>
+      <h3>¿Por qué México?</h3>
+      <p>El Derecho Mercantil mexicano tiene más de <strong>500 años</strong> de historia documentada. Desde los mercados aztecas hasta la Ley Fintech 2018, México ha sido <strong>pionero</strong> en innovación jurídica comercial en América Latina. ¡Miau!</p>
+    </div>
+    <div class="icard">
+      <span class="icard-icon">📜😼</span>
+      <h3>Base Constitucional</h3>
+      <p>Desde 1917, el <strong>Art. 73 Constitucional</strong> da al Congreso federal la exclusividad de legislar en comercio. El <strong>Código de Comercio de 1889</strong> sigue vigente con reformas. ¡El gatito abogado lo estudia todavía hoy! 📚</p>
+    </div>
+  </div>
+
+  <!-- CAT FACT -->
+  <div class="cat-facts">
+    <div class="cf-cat">🧑‍⚖️</div>
+    <div class="cf-text">
+      <h3>¡Dato Gatuno Importante! 🐾</h3>
+      <p>El <strong>Consulado de Comerciantes de México</strong> fundado en <strong>1592</strong> fue el <strong>primer tribunal mercantil en todo el continente americano</strong>. ¡Antes de que existieran muchos países, México ya tenía gatitos resolviendo disputas comerciales! ⚖️😸</p>
+    </div>
+  </div>
+
+  <!-- PERIODOS -->
+  <div class="sec-title"><h2>Periodos Históricos</h2></div>
+
+  <div class="periods-grid">
+
+    <div class="pcard p1">
+      <span class="p-icon">🦅🐱</span>
+      <div class="p-date">Antes de 1521</div>
+      <h3>Época Prehispánica</h3>
+      <p>Los mexicas tenían el <em>tianguis</em> de Tlatelolco, ¡el mercado más grande del mundo conocido! Los <strong>pochtecas</strong> eran los comerciantes profesionales: viajaban lejos y tenían sus propias leyes consuetudinarias de intercambio. 🏺</p>
+      <div class="p-pills">
+        <span class="ppill r">Tianguis</span>
+        <span class="ppill r">Pochtecas</span>
+        <span class="ppill r">Tlatelolco</span>
+      </div>
+    </div>
+
+    <div class="pcard p2">
+      <span class="p-icon">⛵😾</span>
+      <div class="p-date">1521 – 1810</div>
+      <h3>Época Colonial</h3>
+      <p>España impuso su sistema jurídico. Las <em>Ordenanzas de Bilbao</em> (1737) y las Leyes de Indias regulaban el comercio. En <strong>1592</strong> se crea el Consulado de Comerciantes de México, ¡primer tribunal mercantil de América! 🏰</p>
+      <div class="p-pills">
+        <span class="ppill c">Consulado 1592</span>
+        <span class="ppill c">Ordenanzas Bilbao</span>
+      </div>
+    </div>
+
+    <div class="pcard p3">
+      <span class="p-icon">🔔😺</span>
+      <div class="p-date">1810 – 1857</div>
+      <h3>Independencia y 1ª República</h3>
+      <p>¡Los gatitos gritaron independencia! Tras 1821, México hereda el sistema colonial. En 1824 la Constitución da al Congreso el poder de legislar en comercio. Nace el <strong>Código Lares en 1854</strong>, primer código mercantil mexicano. 🎉</p>
+      <div class="p-pills">
+        <span class="ppill r">Constitución 1824</span>
+        <span class="ppill r">Código Lares 1854</span>
+      </div>
+    </div>
+
+    <div class="pcard p4">
+      <span class="p-icon">📋🐾</span>
+      <div class="p-date">1857 – 1876</div>
+      <h3>Reforma y Liberalismo</h3>
+      <p>Con Juárez llegan las <em>Leyes de Reforma</em> que secularizaron el sistema jurídico. En <strong>1863</strong> nuevo Código de Comercio bajo principios liberales, inspirado en el modelo napoleónico. ¡Los gatitos liberales festejaron! ⚖️</p>
+      <div class="p-pills">
+        <span class="ppill l">Juárez</span>
+        <span class="ppill l">Código 1863</span>
+        <span class="ppill l">Liberalismo</span>
+      </div>
+    </div>
+
+    <div class="pcard p5">
+      <span class="p-icon">🏗️😸</span>
+      <div class="p-date">1876 – 1910</div>
+      <h3>Porfiriato y Código de 1889</h3>
+      <p>¡El gatito más importante del Derecho Mercantil mexicano! El <strong>Código de Comercio de 1889</strong> sigue vigente hasta hoy. El Porfiriato trajo ferrocarriles, bancos e inversión extranjera. Un código muy resistente, como los gatos. 🐱</p>
+      <div class="p-pills">
+        <span class="ppill l">⭐ Código 1889</span>
+        <span class="ppill l">Banca</span>
+        <span class="ppill c">Ferrocarriles</span>
+      </div>
+    </div>
+
+    <div class="pcard p6">
+      <span class="p-icon">⚡😼</span>
+      <div class="p-date">1910 – 1940</div>
+      <h3>Revolución y Constitución 1917</h3>
+      <p>¡Revolución! La Constitución de 1917 establece el <strong>Art. 73</strong> que da al Congreso el monopolio legislativo en comercio. En 1932 nace la <strong>LGTOC</strong>, ley de títulos de crédito, que regula la letra de cambio, pagaré y cheque. ¡Miau! 🔥</p>
+      <div class="p-pills">
+        <span class="ppill r">Constitución 1917</span>
+        <span class="ppill r">LGTOC 1932</span>
+      </div>
+    </div>
+
+    <div class="pcard p7">
+      <span class="p-icon">🏭🐱</span>
+      <div class="p-date">1940 – 1990</div>
+      <h3>Industrialización Nacional</h3>
+      <p>México industrializa su economía y necesita más leyes. Sale la <strong>LGSM 1934</strong> (Ley de Sociedades Mercantiles), Ley de Quiebras 1943, Ley del Mercado de Valores 1975. Los gatitos empresarios se multiplican. 🏢</p>
+      <div class="p-pills">
+        <span class="ppill c">LGSM 1934</span>
+        <span class="ppill c">Quiebras 1943</span>
+        <span class="ppill c">BMV</span>
+      </div>
+    </div>
+
+    <div class="pcard p8">
+      <span class="p-icon">🌎😺</span>
+      <div class="p-date">1990 – 2010</div>
+      <h3>Apertura Comercial y TLCAN</h3>
+      <p>El <strong>TLCAN (1994)</strong> lo cambió todo. México se abre al mundo. Se moderniza todo: Ley de Concursos Mercantiles (2000), nueva Ley del Mercado de Valores (2005), arbitraje comercial y contratos electrónicos. ¡Los gatitos exportan! 🚚</p>
+      <div class="p-pills">
+        <span class="ppill r">TLCAN 1994</span>
+        <span class="ppill r">Concursos 2000</span>
+        <span class="ppill l">LMV 2005</span>
+      </div>
+    </div>
+
+    <div class="pcard p9">
+      <span class="p-icon">📱🐾</span>
+      <div class="p-date">2010 – Presente</div>
+      <h3>Era Digital y Ley Fintech</h3>
+      <p>¡México fue pionero mundial! La <strong>Ley Fintech (2018)</strong> fue la primera ley en el mundo en regular integralmente las empresas de tecnología financiera. El <strong>T-MEC (2020)</strong> incluye capítulo digital. ¡Los gatitos tienen cripto! 💻</p>
+      <div class="p-pills">
+        <span class="ppill l">⭐ Ley Fintech 2018</span>
+        <span class="ppill l">T-MEC 2020</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LEYES CLAVE -->
+  <div class="sec-title"><h2>Leyes Fundamentales</h2></div>
+
+  <div class="laws-grid laws-section">
+    <div class="law-card">
+      <span class="law-emoji">📖</span>
+      <span class="law-year">1889</span>
+      <span class="law-name">Código de Comercio</span>
+      <p class="law-desc">¡Todavía vigente! Norma base del Derecho mercantil. Regula actos, comerciantes y contratos.</p>
+    </div>
+    <div class="law-card">
+      <span class="law-emoji">💳</span>
+      <span class="law-year">1932</span>
+      <span class="law-name">LGTOC</span>
+      <p class="law-desc">Ley General de Títulos y Operaciones de Crédito. Letra de cambio, pagaré, cheque. 🐱</p>
+    </div>
+    <div class="law-card">
+      <span class="law-emoji">🏢</span>
+      <span class="law-year">1934</span>
+      <span class="law-name">LGSM</span>
+      <p class="law-desc">Ley General de Sociedades Mercantiles. Marco para SA, SRL, SC y las demás gatitas empresas.</p>
+    </div>
+    <div class="law-card">
+      <span class="law-emoji">💻</span>
+      <span class="law-year">2018</span>
+      <span class="law-name">Ley Fintech 🌟</span>
+      <p class="law-desc">¡1ª ley del mundo en regular fintech! Crowdfunding, pagos electrónicos y criptomonedas.</p>
+    </div>
+  </div>
+
+  <!-- HITOS -->
+  <div class="sec-title"><h2>Hitos Gatunolegales</h2></div>
+
+  <div class="hitos-grid">
+    <div class="hito">
+      <span class="hito-cat">🏺</span>
+      <div>
+        <h4>Consulado de México · 1592</h4>
+        <p>1er tribunal mercantil de América continental. Resolvía disputas entre mercaderes bajo las Ordenanzas de Burgos. ¡Antes que muchos países existieran!</p>
+      </div>
+    </div>
+    <div class="hito">
+      <span class="hito-cat">📜</span>
+      <div>
+        <h4>Código de Comercio · 1889</h4>
+        <p>Promulgado bajo Porfirio Díaz, ¡sobrevivió dos siglos! Sigue siendo la base con reformas que lo actualizan constantemente.</p>
+      </div>
+    </div>
+    <div class="hito">
+      <span class="hito-cat">⚖️</span>
+      <div>
+        <h4>Constitución 1917 · Art. 73</h4>
+        <p>Centralización federal de la legislación mercantil. Garantizó uniformidad jurídica nacional y sentó las bases del México moderno.</p>
+      </div>
+    </div>
+    <div class="hito">
+      <span class="hito-cat">🌎</span>
+      <div>
+        <h4>TLCAN / T-MEC · 1994 / 2020</h4>
+        <p>Reorientó la economía mexicana hacia Norteamérica y forzó modernizar toda la legislación mercantil, arbitral y de comercio exterior.</p>
+      </div>
+    </div>
+    <div class="hito">
+      <span class="hito-cat">💻</span>
+      <div>
+        <h4>Ley Fintech · 2018 🌟</h4>
+        <p>¡México al mundo! Primera ley integral de fintech en el planeta. Regula criptomonedas, crowdfunding y pagos digitales. ¡Pioneros gatunolegales!</p>
+      </div>
+    </div>
+    <div class="hito">
+      <span class="hito-cat">🔄</span>
+      <div>
+        <h4>Reformas al Código · 1996–2016</h4>
+        <p>Múltiples reformas incorporaron e-commerce, arbitraje internacional y mecanismos alternativos de solución de controversias al Código centenario.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-cats">😸 🐾 😺 🐾 😸 🐾 😼 🐾 🐱</span>
+    <p>Historia del Derecho Mercantil en México · Infografía Gatuna II de II · ¡Miau! 🇲🇽⚖️🐾</p>
+  </div>
+
+</div>
+</body>
+</html>
